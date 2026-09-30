@@ -8,6 +8,7 @@ using namespace std;
 struct Tarea {
     string descripcion;
     bool completada;
+    string prioridad;
 };
 
 // Prototipos de las funciones
@@ -68,6 +69,9 @@ void agregarTarea(vector<Tarea>& tareas) {
         return;
     }
 
+    cout << "Ingrese la prioridad (Alta, Media o Baja): ";
+    getline(cin, nueva.prioridad);
+
     nueva.completada = false;
 
     tareas.push_back(nueva);
@@ -93,6 +97,7 @@ void mostrarTareas(const vector<Tarea>& tareas) {
             cout << "[Pendiente] ";
         }
 
+        cout << "[" << tareas[i].prioridad << "] ";
         cout << tareas[i].descripcion << endl;
     }
 }
