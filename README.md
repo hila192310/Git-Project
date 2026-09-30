@@ -1,4 +1,4 @@
-# Proyecto Git
-## Informacion
+## Proyecto Git
+# Informacion
 
 Creado por Hillary Mora
